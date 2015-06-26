@@ -1,0 +1,10 @@
+{{#if Link}}
+    <a class="postTitle linkPost" href="{{Link}}">{{Title}}</a>
+{{else}}
+    <a class="postTitle" href="{{relativeLink}}">{{Title}}</a>
+{{/if}}
+<div class="postMeta">
+	<b>Martin Hartl</b> on
+	{{formatPostDate Date}}
+	<a href="{{relativeLink}}">∞</a>
+</div>
