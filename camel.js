@@ -61,6 +61,7 @@ var allPostsSortedGrouped = {};
 var headerSource;
 var footerSource = null;
 var postHeaderTemplate = null;
+var postFooterTemplate = null;
 var rssFooterTemplate = null;
 var siteMetadata = {};
 
@@ -184,12 +185,14 @@ function generateHtmlAndMetadataForLines(lines, file) {
 		metadata: metadata,
 		header: performMetadataReplacements(metadata, headerSource),
 		postHeader:  performMetadataReplacements(metadata, postHeaderTemplate(metadata)),
+		postFooter: performMetadataReplacements(metadata, postFooterTemplate(metadata)),
 		rssFooter: performMetadataReplacements(metadata, rssFooterTemplate(metadata)),
 		unwrappedBody: performMetadataReplacements(metadata, markdownit.render(lines.body)),
 		html: function () {
 			return this.header +
 				this.postHeader +
 				this.unwrappedBody +
+				this.postFooter +
 				footerSource;
 		}
 	};
@@ -374,6 +377,9 @@ function init() {
         });
         postHeaderTemplate = Handlebars.compile(data);
     });
+	loadHeaderFooter('postFooter.html', function (data) {
+		postFooterTemplate = Handlebars.compile(data);
+	});
 
     // Kill the cache every 30 minutes.
     setInterval(emptyCache, cacheResetTimeInMillis);

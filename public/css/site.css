@@ -268,6 +268,10 @@ section.footnotes {
   border-top: 1px solid #555
 }
 
+#disqus_thread {
+	padding-top:50px;
+}
+
 /* Footer*/
 
 .footer {
