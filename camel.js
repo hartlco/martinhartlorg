@@ -561,7 +561,6 @@ function generateRss(request, feedUrl, linkGenerator, completion) {
 		feed_url: siteMetadata.SiteRoot + feedUrl,
 		site_url: siteMetadata.SiteRoot,
 		image_url: siteMetadata.SiteRoot + '/images/favicon.png',
-		author: siteMetadata.Author,
 		copyright: '2014-' + new Date().getFullYear() 
 		+ " " + siteMetadata.Author,
 		language: 'en',
