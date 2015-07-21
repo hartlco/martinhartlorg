@@ -11,7 +11,6 @@ I was looking for alternatives with the smallest possible complexity that have t
 I quickly settled with [Casey Liss's][2] [Camel][3] 🐪 project. I've already tried it a year ago, but I chose Ghost because I thought the existing community around it may be useful. Now my requirements have changed.
 
 I already had my posts saved as markdown files, so all I had to do was converting the format to Camel's requirements, converting my blog theme and starting the single JavaScript file on my VPS. Done.
-
 Camel has not web interface for posting mobile, but Dropbox on the server makes it possible to use all the great mobile Markdown text editors for posting on the go. I plan to write a follow up post about my specific setup soon. 
 
 I'm happy that I made the switch, everything went really smooth and is running great!
