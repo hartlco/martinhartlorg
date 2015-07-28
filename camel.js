@@ -51,7 +51,7 @@ var footnoteAnchorRegex = /[#"]fn\d+/g;
 var footnoteIdRegex = /fnref\d+/g;
 var utcOffset = 5;
 var cacheResetTimeInMillis = 1800000;
-var twitterUsername = 'caseylisscom';
+var twitterUsername = 'martinhartlorg';
 var twitterClientNeedle = 'Camel Spitter';
 
 var renderedPosts = {};
