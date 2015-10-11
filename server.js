@@ -71,8 +71,6 @@ var siteMetadata = {};
 
 // Middleware to require auth for routes
 function requireAuth(request, response, next) {
-<<<<<<< Local Changes
-<<<<<<< Local Changes
 	console.log(draftAuthInfo);
 	if (Object.values(draftAuthInfo).all(function (i) { typeof i !== 'undefined' && i.length > 0; })) {
 		var user = basicAuth(request);
@@ -80,24 +78,6 @@ function requireAuth(request, response, next) {
 		  response.set('WWW-Authenticate', 'Basic realm=Authorization Required');
 		  return response.status(401).send('You have to say the magic word.');
 		}
-=======
-	if (Object.values(draftAuthInfo).all(function (i) { typeof i !== 'undefined' && i.length > 0; })) {
-		var user = basicAuth(request);
-
-		if (!user || user.name !== draftAuthInfo.user || user.pass !== draftAuthInfo.pass) {
-		  response.set('WWW-Authenticate', 'Basic realm=Authorization Required');
-		  return response.status(401).send('You have to say the magic word.');
-		}
->>>>>>> External Changes
-=======
-	if (Object.values(draftAuthInfo).all(function (i) { typeof i !== 'undefined' && i.length > 0; })) {
-		var user = basicAuth(request);
-
-		if (!user || user.name !== draftAuthInfo.user || user.pass !== draftAuthInfo.pass) {
-		  response.set('WWW-Authenticate', 'Basic realm=Authorization Required');
-		  return response.status(401).send('You have to say the magic word.');
-		}
->>>>>>> External Changes
 	}
     next();
 };
