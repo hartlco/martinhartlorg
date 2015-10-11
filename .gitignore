@@ -10,6 +10,8 @@ pids
 # Dependencies
 node_modules
 
+.env
+
 # Ulysses
 .Ulysses-Group.plist
 posts/2015/.Ulysses-Group.plist

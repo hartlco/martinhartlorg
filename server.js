@@ -83,13 +83,10 @@ var siteMetadata = {};
 
 // Middleware to require auth for routes
 function requireAuth(request, response, next) {
-	console.log(draftAuthInfo);
-	if (Object.values(draftAuthInfo).all(function (i) { typeof i !== 'undefined' && i.length > 0; })) {
-		var user = basicAuth(request);
-		if (!user || user.name !== draftAuthInfo.user || user.pass !== draftAuthInfo.pass) {
-		  response.set('WWW-Authenticate', 'Basic realm=Authorization Required');
-		  return response.status(401).send('You have to say the magic word.');
-		}
+	var user = basicAuth(request);
+	if (!user || user.name !== draftAuthInfo.user || user.pass !== draftAuthInfo.pass) {
+	  response.set('WWW-Authenticate', 'Basic realm=Authorization Required');
+	  return response.status(401).send('You have to say the magic word.');
 	}
     next();
 };
@@ -819,10 +816,10 @@ app.get('/:year/:month/:day/:slug', function (request, response) {
 });
 
 // Empties the cache.
-// app.get('/tosscache', function (request, response) {
-//     emptyCache();
-//     response.send(205);
-// });
+app.get('/tosscache', requireAuth, function (request, response) {
+    emptyCache();
+    response.send(205);
+});
 
 app.get('/count', function (request, response) {
 	console.log("/count");
