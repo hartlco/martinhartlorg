@@ -11,10 +11,9 @@ body {
     -webkit-font-feature-settings: "liga", "dlig";
     -o-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig";
-	max-width:620px;
+	max-width:100%;
 	margin: 0 auto;
 	color: #222222;
-	padding: 0 1rem;
 	font-weight:300;
 }
 
@@ -63,10 +62,12 @@ blockquote p {
 
 /* HEADER */
 .blog-header {
+	background-color: whitesmoke;
 	font-weight:400;
   	width: 100%;
   	position: relative;
   	padding: 0;
+	padding-bottom:1px;
 	-webkit-box-sizing: border-box;
   	-moz-box-sizing: border-box;
   	box-sizing: border-box; 
@@ -119,7 +120,27 @@ blockquote p {
         color: #14B9D6; 
 }
 
+.ava {
+  width: 100px;
+  height: 100px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-top: 16px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+}
+
 /* HOME */
+
+.content {
+	max-width:620px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
 
 .homepage .day .daybreak {
     margin-top: 3em;
@@ -326,4 +347,55 @@ section.footnotes {
 	  margin-left: 2px;
 	  margin-bottom: 0px;
 	}
+}
+
+
+/*Response Columns*/
+/*  SECTIONS  */
+.section {
+	max-width:600px;
+	margin:0 auto;
+	position:relative;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+	max-width:300px;
+}
+.col:first-child { margin-left: 0; }
+
+.col_left {
+
+}
+
+.col_right {
+
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF TWO  */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
 }
