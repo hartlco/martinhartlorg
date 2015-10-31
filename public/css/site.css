@@ -11,10 +11,9 @@ body {
     -webkit-font-feature-settings: "liga", "dlig";
     -o-font-feature-settings: "liga", "dlig";
     font-feature-settings: "liga", "dlig";
-	max-width:620px;
+	max-width:100%;
 	margin: 0 auto;
 	color: #222222;
-	padding: 0 1rem;
 	font-weight:300;
 }
 
@@ -30,7 +29,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #14B9D6
+  color: #00d0a3
 }
 
 img {
@@ -63,10 +62,16 @@ blockquote p {
 
 /* HEADER */
 .blog-header {
+	margin-top:1px;
+    box-shadow: 0px -1px 1px 0px #00d0a3;
+	background-color: whitesmoke;
 	font-weight:400;
   	width: 100%;
   	position: relative;
-  	padding: 0;
+	padding-top:1rem;
+	padding-bottom:1rem;
+	padding-left:5px;
+	padding-right:5px;
 	-webkit-box-sizing: border-box;
   	-moz-box-sizing: border-box;
   	box-sizing: border-box; 
@@ -74,7 +79,7 @@ blockquote p {
 
 .blog-header .blog-title {
     margin: 0;
-    padding: 32px 16px 8px;
+    padding: 0px 16px 24px;
     font-size: 2.1rem;
     text-align: center;
     font-weight: 700;
@@ -91,7 +96,7 @@ blockquote p {
 }
 
 .blog-header .blog-title a:hover {
-      color: #14B9D6; 
+      color: #00d0a3; 
 }
 
 .blog-header .blog-description {
@@ -105,7 +110,10 @@ blockquote p {
 }
 
 .blog-header .custom-links {
-    margin: 0 0 50px;
+	/* Rectangle 1: */
+	border: 1px solid #cccccc;
+	border-radius: 10px;
+	font-size: 0.9rem;
     text-align: center;
     color: #cccccc; 
 }
@@ -116,10 +124,29 @@ blockquote p {
 }
 
 .blog-header .custom-links a:hover {
-        color: #14B9D6; 
+        color: #00d0a3; 
+}
+
+.ava {
+  width: 65px;
+  height: 65px;
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
 }
 
 /* HOME */
+
+.content {
+	max-width:660px;
+	margin: 0 auto;
+	padding: 2rem 1rem;
+}
 
 .homepage .day .daybreak {
     margin-top: 3em;
@@ -275,6 +302,7 @@ section.footnotes {
 
 .footer {
 	margin-top:2rem;
+	margin-bottom:1rem;
 	text-align:center;
 	font-size:0.9rem;
 	color: #888888;
@@ -326,4 +354,56 @@ section.footnotes {
 	  margin-left: 2px;
 	  margin-bottom: 0px;
 	}
+}
+
+
+/*Response Columns*/
+/*  SECTIONS  */
+.section {
+	max-width:760px;
+	margin:0 auto;
+	position:relative;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+	max-width:380px;
+}
+.col:first-child { margin-left: 0; }
+
+.col_left {
+
+}
+
+.col_right {
+
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+/*  GRID OF TWO  */
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 600px) {
+	.col { 
+		max-width:600px;
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.span_2_of_2, .span_1_of_2 { width: 100%; }
 }
