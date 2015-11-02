@@ -3,4 +3,6 @@
 @@ Description=This is a short description used in Twitter cards and Facebook Open Graph.
 @@ Image=http://somehost.com/someimage.png
 
-This is a *test post* entitled "@@Title@@".
+This is a *test post* entitled "@@Title@@".[^1]
+
+[^1]:das ist ein test
