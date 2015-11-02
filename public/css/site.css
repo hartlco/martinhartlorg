@@ -127,6 +127,11 @@ blockquote p {
         color: #00d0a3; 
 }
 
+hr {
+	border-color:transparent;
+	height:0px;
+}
+
 .ava {
   width: 65px;
   height: 65px;
@@ -276,22 +281,6 @@ section.footnotes {
 
 .post .postHeader .postTitle:visited {
     color: black;
-}
-
-.post hr {
-    width: 35%;
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-.homepage .article hr.footnotes-sep  {
-  width: 50%;	
-  border-top: 1px solid #555
-}
-
-.post hr.footnotes-sep {
-  width: 70%;
-  border-top: 1px solid #555
 }
 
 #disqus_thread {
