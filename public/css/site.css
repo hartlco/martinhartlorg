@@ -2,7 +2,7 @@
 
 body {
 	font-family: -apple-system, "Helvetica Neue", "Lucida Grande";
-	-webkit-font-smoothing: subpixel-antialiased; 
+	-webkit-font-smoothing: subpixel-antialiased;
 	font-size:1.1rem;
 	line-height: 1.6;
     text-rendering: optimizeLegibility;
@@ -74,7 +74,7 @@ blockquote p {
 	padding-right:5px;
 	-webkit-box-sizing: border-box;
   	-moz-box-sizing: border-box;
-  	box-sizing: border-box; 
+  	box-sizing: border-box;
 }
 
 .blog-header .blog-title {
@@ -87,16 +87,16 @@ blockquote p {
     outline: 0;
     line-height: 50px;
     word-break: break-word;
-    color: #141414; 
+    color: #141414;
 }
-	
+
 .blog-header .blog-title a {
    	text-decoration: none;
-	color: #000000; 
+	color: #000000;
 }
 
 .blog-header .blog-title a:hover {
-      color: #00d0a3; 
+      color: #00d0a3;
 }
 
 .blog-header .blog-description {
@@ -106,7 +106,7 @@ blockquote p {
     line-height: 1.5;
     color: #666666;
     text-align: center;
-    font-weight: 400; 
+    font-weight: 400;
 }
 
 .blog-header .custom-links {
@@ -115,16 +115,16 @@ blockquote p {
 	border-radius: 10px;
 	font-size: 0.9rem;
     text-align: center;
-    color: #cccccc; 
+    color: #cccccc;
 }
 
 .blog-header .custom-links a {
       text-decoration: none;
-      color: #999999; 
+      color: #999999;
 }
 
 .blog-header .custom-links a:hover {
-        color: #00d0a3; 
+        color: #00d0a3;
 }
 
 hr {
@@ -260,7 +260,7 @@ a.postTitle {
 .postHeader .postPermalink img {
   width: 1.5em;
   height: 1.5em;
-  top: 5px; 
+  top: 5px;
   position: relative;
 }
 
@@ -277,6 +277,10 @@ a.postTitle {
 
 section.footnotes {
   font-size: 0.8em;
+}
+
+.footnote-item {
+	line-height: 1.75;
 }
 
 .post .postHeader .postTitle:visited {
@@ -316,7 +320,7 @@ section.footnotes {
 	.postTitle {
 		font-size:1.3rem;
 	}
-	
+
 	body {
 		font-size:0.875rem;
 		line-height:1.4rem;
@@ -338,7 +342,7 @@ section.footnotes {
     .center img.left, .center img.right{
       margin: 0;
     }
-	
+
 	li {
 	  margin-left: 2px;
 	  margin-bottom: 0px;
@@ -387,7 +391,7 @@ section.footnotes {
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
 @media only screen and (max-width: 600px) {
-	.col { 
+	.col {
 		max-width:600px;
 		margin: 1% 0 1% 0%;
 	}
